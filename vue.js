@@ -7,7 +7,7 @@ new Vue({
     course: 'Webエンジニアコース',
     acceptancePeriod: '2019年01月期',
     defaultLastId: 3,
-    NextId: 4,
+    nextId: 4,
     students: [
       { id: 1, name: '野呂浩良', course: '機械学習コース', acceptancePeriod: '2019年01月期' },
       { id: 2, name: '富永修司', course: 'Webエンジニアコース', acceptancePeriod: '2017年11月期' },
@@ -16,12 +16,12 @@ new Vue({
   },
   // methodsに、Vue.jsのインスタンスに使用させたいメソッドを記載する
   methods: {
-    addStudent: function(NextId, name, course, acceptancePeriod) {
+    addStudent: function(nextId, name, course, acceptancePeriod) {
       // この function() { } の中にaddStudentメソッド
       // （入力欄に入力された値と、ID値（最後に登録されたID値+1の値）が新たに出現する機能）の処理を書く
       if(this.name == '' || this.course == '' || this.acceptancePeriod == '') return
       this.students.push({
-        id: this.NextId++,
+        id: this.nextId++,
         name: this.name,
         course: this.course,
         acceptancePeriod: this.acceptancePeriod
